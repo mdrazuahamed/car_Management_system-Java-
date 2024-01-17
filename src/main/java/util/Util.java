@@ -22,7 +22,7 @@ public class Util {
         String email = Util.enterString("Enter your Email");
         String phone = Util.enterString("Enter your Phone Number");
 
-        return "Name: " + nameSurname + ", Email" + email + ", Phone" + phone;
+        return "Name: " + nameSurname + ", Email: " + email + ", Phone: " + phone;
     }
 
     public static String fillTripInfo(){

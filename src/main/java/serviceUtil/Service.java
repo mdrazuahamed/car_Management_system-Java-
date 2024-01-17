@@ -6,13 +6,14 @@ import util.Util;
 import java.util.LinkedList;
 
 public class Service {
-    public static void menu1(){
+    public static void menu1 () throws Exception{
         String info = Util.fillUserInfo();
         System.out.println(info);
         System.out.println("Welcome ...");
         String city = Util.enterString("Where do you want to go?");
         String toUbberCity = city.toUpperCase();
         System.out.println("Checking destination for " + toUbberCity);
+        Thread.sleep(5000);
         Cities cities = new Cities();
         LinkedList<String> list = cities.getList();
         if (list.contains(toUbberCity)){
@@ -22,7 +23,9 @@ public class Service {
         }
         else {
             System.out.println("There are no available trips \t Here are the active trips");
-            LinkedList<String> list1 = cities.getList();
+            //Cities cities2 = new Cities();
+            //LinkedList<String> list1 = cities.getList();
+            System.out.println(cities.getList());
             for(String s : list){
                 System.out.println(s);
             }
@@ -40,7 +43,12 @@ public class Service {
         System.out.println( " Car type " + carType + " Place from " + placeFrom + " Place to " + placeTo +
                 " With " + capacity + " passengers with these requires:" +
                 " " + requires);
+    }
 
-
+    public static void menu3(){
+        System.out.println("\"Unique\" is a car rent company\n");
+        System.out.println("Location: Mohakhali Dohs, lane 4\n");
+        System.out.println("contact number: 01762700100\n");
+        System.out.println("Thanks for coming ..");
     }
 }
